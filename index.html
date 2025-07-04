@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<head>
+<style>
+*{
+	box-sizing:border-box;
+	font-family:helvetica;
+}
+
+h1, h2{
+	background:#000;
+	color:#fff;
+	padding:15px;
+	padding-left:25px;
+}
+
+a{
+	text-decoration:none;
+	color:#000;
+	border:solid 1px #000;
+	padding:5px;
+	margin:5px;
+}
+
+a:hover{
+	background:#000;
+	color:#fff;
+}
+
+nav a{
+	display:block;
+}
+
+body{
+}
+
+.main{
+	display:flex;
+	width:100%;
+}
+
+.content{
+	width:100%;
+	margin:25px;
+}
+nav{
+	text-align:center;
+	width:200px;
+}
+footer{
+	text-align:center;
+	margin:25px;
+}
+
+.logo{
+	image-rendering: pixelated;
+	width:100%;
+	height:auto;
+}
+
+.header{
+	margin:0px;
+}
+
+</style>
+</head>
+<body>
+	<div class='main'>
+		<nav>
+			<img class='logo' src='hh.png'/>
+			<h3 class='header'>Harrison Hartley</h3>
+			<h2>Sites</h2>
+			<a href='https://bsky.app/profile/pinguinogelato.bsky.social'> Bluesky </a>
+			<a href='https://github.com/gk-greyghost'> GitHub </a>
+			<a href='https://instagram.com/harrisonhhartley'> Instagram </a>
+			<a href='https://www.imdb.com/name/nm5792410/'> IMDB </a>
+			<a href='https://pinguinogelato.itch.io/'> Itch.io </a>
+			<a href='https://mstdn.social/@Harrison'>Mastodon </a>
+			<a href='https://twitch.tv/greyghost'> Twitch</a>
+			<h2> Art  Directors Guild </h2>
+			<a href='#film'>Film</a>
+			<a href='#television'>Television</a>
+			<a href='#commercials'>Commercials</a>
+			<h2>Programming</h2>
+			<a href='https://gk-greyghost.github.io/dice/'> Dice Web App </a>
+			<a href='https://pinguinogelato.itch.io/'>Games</a>
+			<a href='https://github.com/godotengine/godot'>Godot Engine Contributor</a>
+			<a href='https://gk-greyghost.github.io/measurements/'>Measurement Conversion Tool</a>
+			<a href='https://laafa.edu/'>Programming Teacher at LAAFA (2017 - 2018)</a>
+			<!--<h2>2D & 3D Art</h2> -->
+			<!--<a href='#'>Graphic Design</a> -->
+			<!--<a href='#'>Set Renders</a> --> 
+			<!--<a href='#'>Low Poly Modeling</a> --> 
+			<!--<a href='#'>Pixel Art</a> -->
+			<h2>Music</h2>
+			<a href='https://www.deezer.com/us/artist/200729067'> Deezer </a>
+			<a href='https://open.spotify.com/artist/2O0cNaRAabEAK5kJmptsUT'>Spotify</a>
+			<!--
+			<h2>Writing</h2>
+			<a href='#'>Coming Soon</a>
+			<h2>Directing</h2>
+			<a href='#'>Second Unit - </a>
+			<a href='#'>Animo Shorts</a>
+			<h2>Editing</h2>
+			<a href='#'>Maria</a>
+			<a href='#'>Animo Shorts</a>
+			-->
+		</nav>
+		<div class='content'></div>
+	</div>
+<footer>Made with love, from scratch by Harrison Hartley 2025</footer>
+
+<script>
+
+const pages = {
+	film:`<h1>Films</h1>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/2lqRPUhPfho?si=Pd9lpqlCH182sZIj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/RbIxYm3mKzI?si=RC5Xyq8ftaVEJ7L5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/S6O4iy3Twwo?si=Nwf9Kp3zN_DY716z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+	commercials:`
+	<h1>Commercials</h1>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/GltwQwN29pk?si=SU9C_2EpfVWCbPfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/oZNeLfLEkCs?si=TP7Y6Ik4-TXBZ-4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/IgXZ8TeimNo?si=HXlgVNcu6bYSNouX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/F_YRNBw228w?si=6e5Ay95KmWohwjPk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/rN-GZ0YffVo?si=cd8oGUFAKpUazne2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/0JO68mv9HPg?si=aQoUdyW0zaGL6xFC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/l6xwPuSKNWI?si=ga81T6LIRZyPjwB6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+	television:`
+	<h1>Television</h1>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/gmMLUx7ZKR0?si=JOe6PVP7ltXHaPs9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+}
+
+window.addEventListener('hashchange',(e) => {
+	hashCheck();
+},false);
+
+hashCheck();
+
+function hashCheck(){
+	const hash = window.location.hash.substr(1);
+	if(pages[hash]){
+		document.querySelector('.content').innerHTML = pages[hash];
+	}else{
+		document.querySelector('.content').textContent = 'not made yet';
+	}
+}
+
+</script>
+</body>
+</html>
