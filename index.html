@@ -31,24 +31,38 @@ nav a{
 }
 
 body{
+	font-size:0.8em;
+}
+
+html,body{
+	overflow:hidden;
+	width:100vw;
+	height:100vh;
+	margin:0px;
+	padding:0px;
 }
 
 .main{
 	display:flex;
 	width:100%;
+	height:calc(100% - 60px);
 }
 
 .content{
 	width:100%;
+	height:100%;
+	overflow:auto;
 	margin:25px;
 }
 nav{
 	text-align:center;
 	width:200px;
+	margin:15px;
 }
 footer{
 	text-align:center;
-	margin:25px;
+	margin:15px;
+	padding:20px;
 }
 
 .logo{
@@ -59,6 +73,16 @@ footer{
 
 .header{
 	margin:0px;
+}
+
+.welcome{
+	margin:25px;
+	width:800px;
+	max-width:90%;
+	font-size:1.5em;
+	border:solid 1px #000;
+	padding:25px;
+	font-family:Times New Roman;
 }
 
 </style>
@@ -104,11 +128,10 @@ footer{
 			<a href='#'>Maria</a>
 			<a href='#'>Animo Shorts</a>
 			-->
+			<footer>Made with love, from scratch by Harrison Hartley 2025</footer>
 		</nav>
 		<div class='content'></div>
 	</div>
-<footer>Made with love, from scratch by Harrison Hartley 2025</footer>
-
 <script>
 
 const pages = {
@@ -141,7 +164,7 @@ function hashCheck(){
 	if(pages[hash]){
 		document.querySelector('.content').innerHTML = pages[hash];
 	}else{
-		document.querySelector('.content').textContent = 'not made yet';
+		document.querySelector('.content').innerHTML = `<div class='welcome'>Hello all! My name is Harrison (He/Him), I'm trying to bring back a bit of that old web feel with my site and keep it personal and fun, the site is still a work in progress but I hope you have a fun time looking around while I work on it :D</div>`;
 	}
 }
 
